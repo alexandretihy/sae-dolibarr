@@ -2,17 +2,17 @@
 
 (remplacer les items en majuscule)
 
-* TITRE PROJET
-* NOM CHEF DE PROJET
-* NOMS AUTRE MEMBRES EQUIPE
-* DATE DEBUT
+* sae-dolibarr
+* Alexandre
+* Ilyes Kebairi
+* 5/10
 
 
 ## Séance n° 1
 
-* date - heure
-* Travail effectué
-* A faire à la prochaine séance
+* 16 17
+* installation debian 
+*beaucoup de chose
 * Difficultés rencontrées
 * Remarques sur la séances (membre absent, pbe technique, ...)
 
