@@ -26,7 +26,7 @@ le docker fonctionne et on a installé dolibarr en physique sur la VM pour compr
 
 ## Séance n° 3
 
-* date - heure
+* 06/10/2026 de 16h-17h30
 * Travail effectué
 * A faire à la prochaine séance
 * Difficultés rencontrées
