@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  mariadb:
+    image: mariadb:11.4
+    container_name: dolibarr-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root_rt
+      MYSQL_DATABASE: dolibarr
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user_rt
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    networks:
+      - dolibarr-network
+
+  dolibarr:
+    image: tuxgasy/dolibarr:latest
+    container_name: dolibarr-web
+    restart: unless-stopped
+    depends_on:
+      - mariadb
+    ports:
+      - "8080:80"
+    environment:
+      DOLI_DB_HOST: mariadb
+      DOLI_DB_NAME: dolibarr
+      DOLI_DB_USER: user
+      DOLI_DB_PASSWORD: user_rt
+      DOLI_ADMIN_LOGIN: admin
+      DOLI_ADMIN_PASSWORD: admin_rt
+    volumes:
+      - dolibarr_documents:/var/www/documents
+      - dolibarr_custom:/var/www/html/custom
+    networks:
+      - dolibarr-network
+
+volumes:
+  mariadb_data:
+  dolibarr_documents:
+  dolibarr_custom:
+
+networks:
+  dolibarr-network:
+    driver: bridge
