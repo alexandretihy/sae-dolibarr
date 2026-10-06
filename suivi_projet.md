@@ -5,25 +5,23 @@
 * sae-dolibarr
 * Alexandre
 * Ilyes Kebairi
-* 5/10
+* 5/10/2026
 
 
 ## Séance n° 1
 
-* 16 17
+* 1er cours 16h-17h30
 * installation debian 
 *beaucoup de chose
-* Difficultés rencontrées
-* Remarques sur la séances (membre absent, pbe technique, ...)
-
+  RAS
 
 ## Séance n° 2
 
-* date - heure
-* Travail effectué
+* 06/10/2026 DE 8H30-10H
+* Installation de docker, installation de PHP Apache et de dolibarr
+le docker fonctionne et on a installé dolibarr en physique sur la VM pour comprendre le fonctionnement 
 * A faire à la prochaine séance
-* Difficultés rencontrées
-* Remarques sur la séances (membre absent, pbe technique, ...)
+* Quelque conflits dans le yaml avec les mdps 
 
 
 ## Séance n° 3
