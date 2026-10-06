@@ -13,7 +13,7 @@
 * 1er cours 16h-17h30
 * installation debian 
 *beaucoup de chose
-  RAS
+*RAS
 
 ## Séance n° 2
 
