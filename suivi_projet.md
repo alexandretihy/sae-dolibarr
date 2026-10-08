@@ -12,7 +12,6 @@
 
 * 1er cours 16h-17h30
 * installation debian 
-*beaucoup de chose
 * RAS
 
 ## Séance n° 2
@@ -27,13 +26,20 @@ le docker fonctionne et on a installé dolibarr en physique sur la VM pour compr
 ## Séance n° 3
 
 * 06/10/2026 de 16h-17h30
-* Travail effectué
 * A faire à la prochaine séance
 * Difficultés rencontrées
-* Remarques sur la séances (membre absent, pbe technique, ...)
 
+## Séance n° 4
 
+* 06/10/2026 de 13h-16h
+* objectif automatiser installation de dolibarr
 
-...
+* creation du .env pour ne pas avoir les mdp en claire
+* importation du fichier client.csv sur dolibarr
+* difficulté comprendre le fonctionnement de dolibarr pour l'importation du fichier
+* 
+* Importer le fichier fournisseur 
+* Difficultés rencontrées
+
 
 
