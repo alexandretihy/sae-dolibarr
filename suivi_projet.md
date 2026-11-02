@@ -61,16 +61,6 @@ Identifier et résoudre les problèmes rencontrés lors de la séance précéden
 
 ## Séance n° 4
 
-* 06/10/2026 de 13h-16h
-* objectif automatiser installation de dolibarr
-
-* creation du .env pour ne pas avoir les mdp en claire
-* importation du fichier client.csv sur dolibarr
-* difficulté comprendre le fonctionnement de dolibarr pour l'importation du fichier
-* 
-* Importer le fichier fournisseur 
-* Difficultés rencontrées
-
 Date : 06/10/2026
 Horaires : 13h00 – 16h00
 
