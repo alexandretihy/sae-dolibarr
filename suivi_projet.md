@@ -28,18 +28,36 @@ L'installation de Debian s'est déroulée correctement. L'environnement de trava
 
 ## Séance n° 2
 
-* 06/10/2026 DE 8H30-10H
-* Installation de docker, installation de PHP Apache et de dolibarr
- le docker fonctionne et on a installé dolibarr en physique sur la VM pour comprendre le fonctionnement 
-* A faire à la prochaine séance
-* Quelque conflits dans le yaml avec les mdps 
+Date : 06/10/2026
+Horaires : 08h30 – 10h00
 
+Objectifs de la séance
+Installer et configurer Docker.
+Mettre en place les services nécessaires au fonctionnement de Dolibarr.
+Découvrir le fonctionnement de Dolibarr.
+Travail réalisé
+
+On a installé Docker pour pouvoir utiliser des conteneurs pour déployer les différents services du projet, nous avons aussi installé PHP et Apache qui sont nécessaires au fonctionnement de l'application web Dolibarr. 
+
+En parallèle, nous avons également effectué une installation classique de Dolibarr directement sur la machine virtuelle, sans utiliser Docker. Cette installation avait pour objectif de mieux comprendre le fonctionnement de l'application, son interface et ses différentes fonctionnalités avant de passer à une installation entièrement automatisée avec Docker.
+
+Difficultés rencontrées
+Nous avons rencontré quelques conflits lors de la configuration du fichier YAML utilisé par Docker Compose, notamment au niveau des mots de passe et des variables de configuration.
+
+Travail à poursuivre
+Vérifier le bon fonctionnement des conteneurs Docker.
+Continuer la découverte des fonctionnalités de Dolibarr en important les fichier csv 
+Commencer à réfléchir à l'automatisation de son installation.
 
 ## Séance n° 3
 
-* 06/10/2026 de 16h-17h30
-* A faire à la prochaine séance
-* Difficultés rencontrées
+Séance n° 3 – Configuration et résolution des problèmes
+Date : 06/10/2026
+Horaires : 16h00 – 17h30
+
+Objectifs de la séance
+Poursuivre la configuration de l'environnement Docker.
+Identifier et résoudre les problèmes rencontrés lors de la séance précédente.
 
 ## Séance n° 4
 
@@ -53,6 +71,23 @@ L'installation de Debian s'est déroulée correctement. L'environnement de trava
 * Importer le fichier fournisseur 
 * Difficultés rencontrées
 
+Date : 06/10/2026
+Horaires : 13h00 – 16h00
+
+Objectifs de la séance
+Automatiser l'installation de Dolibarr.
+Commencer l'importation des données clients et fournisseurs.
+
+Travail réalisé
+
+Nous avons créé un fichier .env. Ce fichier permet de stocker les informations sensibles, comme les mots de passe et les paramètres de connexion, séparément du fichier Docker Compose. Cela évite notamment d'inscrire directement les mots de passe en clair dans le fichier YAML.
+
+Nous avons ensuite procédé à l'importation du fichier client.csv dans Dolibarr afin d'intégrer les informations relatives aux clients dans l'application.
+
+Cette étape nous a permis de découvrir le fonctionnement du module d'importation de Dolibarr et de comprendre comment les données présentes dans un fichier CSV doivent être organisées pour être correctement reconnues par l'application.
+
+Difficultés rencontrées
+La principale difficulté rencontrée concerne la compréhension du système d'importation de Dolibarr.
 
 ## Séance n° 5
 
