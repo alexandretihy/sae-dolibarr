@@ -85,9 +85,43 @@ La principale difficulté rencontrée concerne la compréhension du système d'i
 * objectif automatiser installation de dolibarr avec les docker
 * 
 * difficulté comprendre le fonctionnement de dolibarr pour l'importation du fichier
-* 
-* autmatisatio des Importeation des fichiers fournisseur 
-* Difficultés rencontrées
+
+sur cette séance on a création de l'automatisation de dolibar 
+
+poiur la prochaine seance on doit poursuire aotomatisation notament limportation des fichier csv
+
+## Séance n° 6 – Automatisation de l'importation des fichiers CSV
+
+Date :03/11/2026  
+Horaires : 16h00 – 19h00
+
+1. Travail réalisé
+
+Durant cette  séance, nous avons travaillé sur l'automatisation complète de l'importation des fichiers CSV dans Dolibarr.
+
+L'objectif était de permettre l'importation automatique des fichiers contenant les informations des clients et des fournisseurs, afin qu'ils soient directement intégrés et correctement répartis dans Dolibarr.
+
+2. Difficultés rencontrées
+
+Plusieurs problèmes techniques ont été rencontrés au cours de cette séance :
+
+- Problème d'importation avec Docker Compose :Docker Compose indiquait que les fichiers avaient bien été importés dans Dolibarr, alors qu'ils n'étaient pas visibles sur la plateforme.
+- Configuration du module Tier Tools :Nous avons rencontré des difficultés pour automatiser ce module, qui permet notamment de consulter et de gérer les fichiers CSV.
+- Problème de permissions : Nous avons réussi, pendant un temps, à importer les fichiers, mais nous ne disposions pas des droits nécessaires pour y accéder et les exploiter.
+- Plusieurs tentatives de correction  Nous avons dû effectuer différents essais et ajustements afin d'identifier l'origine des problèmes et de parvenir à une importation fonctionnelle.
+
+3. Résultats obtenus
+
+Après plusieurs tentatives et corrections, nous avons finalement réussi à automatiser l'importation des fichiers CSV contenant les données des clients et des fournisseurs.
+
+Les données ont été correctement intégrées et réparties dans les catégories correspondantes de Dolibarr.
+
+L'importation fonctionne désormais comme prévu.
+
+ 4. Travail restant à effectuer
+
+- Mettre en place une sauvegarde (backup) du projet afin de sécuriser les données.
+- Vérifier le bon fonctionnement global du processus d'importation.
 
 
 
