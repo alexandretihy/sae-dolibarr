@@ -1,15 +1,16 @@
-version: '3.8'
 
 services:
   mariadb:
     image: mariadb:11.4
+
     container_name: dolibarr-db
     restart: unless-stopped
+    command: --local-infile=1 
     environment:
-      MYSQL_ROOT_PASSWORD: root_rt
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: dolibarr
       MYSQL_USER: user
-      MYSQL_PASSWORD: user_rt
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     volumes:
       - mariadb_data:/var/lib/mysql
     networks:
@@ -24,16 +25,35 @@ services:
     ports:
       - "8080:80"
     environment:
-      DOLI_DB_HOST: mariadb
-      DOLI_DB_NAME: dolibarr
-      DOLI_DB_USER: user
-      DOLI_DB_PASSWORD: user_rt
-      DOLI_ADMIN_LOGIN: admin
-      DOLI_ADMIN_PASSWORD: admin_rt
+      DOLI_DB_HOST: ${DOLI_DB_HOST}
+      DOLI_DB_NAME: ${DOLI_DB_NAME}
+      DOLI_DB_USER: ${DOLI_DB_USER}
+      DOLI_DB_PASSWORD: ${DOLI_DB_PASSWORD}
+      DOLI_ADMIN_LOGIN: ${DOLI_ADMIN_LOGIN}
+      DOLI_ADMIN_PASSWORD: ${DOLI_ADMIN_PASSWORD}
+      DOLI_MODULES: ${DOLI_MODULES}
     volumes:
       - dolibarr_documents:/var/www/documents
       - dolibarr_custom:/var/www/html/custom
     networks:
+      - dolibarr-network
+
+  importer:
+     build:
+      context: .
+      dockerfile: docker/importer/Dockerfile
+     depends_on:
+       - mariadb
+       - dolibarr
+     environment:
+      DB_HOST: mariadb
+      DB_NAME: ${DOLI_DB_NAME}
+      DB_USER: ${DOLI_DB_USER}
+      DB_PASSWORD: ${DOLI_DB_PASSWORD}
+     volumes:
+      - ./data:/data:ro
+     restart: "no"
+     networks:
       - dolibarr-network
 
 volumes:
