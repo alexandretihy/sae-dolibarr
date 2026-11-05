@@ -51,10 +51,6 @@ Commencer à réfléchir à l'automatisation de son installation.
 
 ## Séance n° 3
 
-Séance n° 3 – Configuration et résolution des problèmes
-Date : 06/10/2026
-Horaires : 16h00 – 17h30
-
 Objectifs de la séance
 Poursuivre la configuration de l'environnement Docker.
 Identifier et résoudre les problèmes rencontrés lors de la séance précédente.
@@ -81,13 +77,53 @@ La principale difficulté rencontrée concerne la compréhension du système d'i
 
 ## Séance n° 5
 
-* 06/10/2026 de 13h-16h
-* objectif automatiser installation de dolibarr avec les docker
-* 
-* difficulté comprendre le fonctionnement de dolibarr pour l'importation du fichier
-* 
-* autmatisatio des Importeation des fichiers fournisseur 
-* Difficultés rencontrées
+Date : 02/11/2026
+Horaire : 13h00 – 16h00
+
+Objectif de la séance :
+Automatiser l’installation de Dolibarr à l’aide de Docker.
+
+Travaux réalisés :
+Lors de cette séance, nous avons travaillé sur la mise en place de l’automatisation de l’installation de Dolibarr à l’aide de conteneurs Docker.
+
+Difficultés rencontrées :
+Nous avons rencontré des difficultés pour comprendre le fonctionnement de Dolibarr, notamment concernant le processus d’importation des fichiers et leur intégration dans le logiciel.
+
+Objectifs de la prochaine séance :
+Poursuivre le développement de l’automatisation de Dolibarr, en mettant particulièrement l’accent sur l’importation des fichiers CSV et leur intégration dans l’application.
+
+## Séance n° 6 – Automatisation de l'importation des fichiers CSV
+
+Date :03/11/2026  
+Horaires : 16h00 – 19h00
+
+1. Travail réalisé
+
+Durant cette  séance, nous avons travaillé sur l'automatisation complète de l'importation des fichiers CSV dans Dolibarr.
+
+L'objectif était de permettre l'importation automatique des fichiers contenant les informations des clients et des fournisseurs, afin qu'ils soient directement intégrés et correctement répartis dans Dolibarr.
+
+2. Difficultés rencontrées
+
+Plusieurs problèmes techniques ont été rencontrés au cours de cette séance :
+
+- Problème d'importation avec Docker Compose :Docker Compose indiquait que les fichiers avaient bien été importés dans Dolibarr, alors qu'ils n'étaient pas visibles sur la plateforme.
+- Configuration du module Tier Tools :Nous avons rencontré des difficultés pour automatiser ce module, qui permet notamment de consulter et de gérer les fichiers CSV.
+- Problème de permissions : Nous avons réussi, pendant un temps, à importer les fichiers, mais nous ne disposions pas des droits nécessaires pour y accéder et les exploiter.
+- Plusieurs tentatives de correction  Nous avons dû effectuer différents essais et ajustements afin d'identifier l'origine des problèmes et de parvenir à une importation fonctionnelle.
+
+3. Résultats obtenus
+
+Après plusieurs tentatives et corrections, nous avons finalement réussi à automatiser l'importation des fichiers CSV contenant les données des clients et des fournisseurs.
+
+Les données ont été correctement intégrées et réparties dans les catégories correspondantes de Dolibarr.
+
+L'importation fonctionne désormais comme prévu.
+
+ 4. Travail restant à effectuer
+
+- Mettre en place une sauvegarde (backup) du projet afin de sécuriser les données.
+- Vérifier le bon fonctionnement global du processus d'importation.
 
 
 
