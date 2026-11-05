@@ -8,6 +8,6 @@ Documentation :
   - Importer & exporter des données csv : https://www.dolibarr.org/presentation-imports-exports.php?lang=fr&l=fr 
 
 IA : 
-  -Gemini 
-  -Claude IA
+  - Gemini 
+  - Claude IA
 
