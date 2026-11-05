@@ -22,33 +22,41 @@ for i in $(seq 1 60); do
 done
 [ "$ready" -eq 1 ] || { echo "Dolibarr n'a pas répondu, voir : docker compose logs dolibarr"; exit 1; }
 
-echo "Attente de la fin du conteneur importer..."
-IMPORTER_ID=$(docker compose ps -aq importer | head -n 1)
-if [ -n "$IMPORTER_ID" ]; then
-  docker wait "$IMPORTER_ID" >/dev/null 2>&1 || true
-fi
+# Vérifier si la base de données contient déjà des tables (données vivantes)
+DB_EXISTS=$(docker compose exec -T mariadb mariadb -u root -p"${MYSQL_ROOT_PASSWORD:-root_rt}" -Nse \
+  "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema='${DOLI_DB_NAME}';" 2>/dev/null || echo "0")
 
-if [ -f "sql/backup.sql" ] && [ -s "sql/backup.sql" ]; then
-  echo "Sauvegarde détectée (sql/backup.sql). Restauration de la base de données..."
-  docker compose exec -T mariadb mariadb \
-    -u root -p"${MYSQL_ROOT_PASSWORD:-root_rt}" \
-    "${DOLI_DB_NAME}" < sql/backup.sql
-  echo "Base de données restaurée depuis sql/backup.sql !"
+if [ "$DB_EXISTS" -gt 10 ]; then
+  echo "Base de données active détectée (${DB_EXISTS} tables). Utilisation de la base principale en cours..."
 else
-  echo "Aucune sauvegarde trouvée. Vérification de l'import CSV initial..."
-  docker compose logs importer | tail -n 10
+  echo "La base de données est vide ou absente."
+  
+  if [ -f "sql/backup.sql" ] && [ -s "sql/backup.sql" ]; then
+    echo "Restauration depuis la sauvegarde de secours (sql/backup.sql)..."
+    docker compose exec -T mariadb mariadb \
+      -u root -p"${MYSQL_ROOT_PASSWORD:-root_rt}" \
+      "${DOLI_DB_NAME}" < sql/backup.sql
+    echo "Base restaurée avec succès depuis le backup !"
+  else
+    echo "Aucune sauvegarde trouvée. Attente de la fin de l'import CSV initial..."
+    IMPORTER_ID=$(docker compose ps -aq importer | head -n 1)
+    if [ -n "$IMPORTER_ID" ]; then
+      docker wait "$IMPORTER_ID" >/dev/null 2>&1 || true
+    fi
+    docker compose logs importer | tail -n 10
 
-  echo "Activation automatique des modules Tiers, Fournisseurs et Import..."
-  docker compose exec -T dolibarr php -r '
-  require_once "/var/www/html/master.inc.php";
-  require_once DOL_DOCUMENT_ROOT . "/core/lib/admin.lib.php";
-  $langs->load("admin");
-  $user->fetch(1);
-  $user->getrights();
-  activateModule("modSociete");
-  activateModule("modFournisseur");
-  activateModule("modImport");
-  '
+    echo "Activation automatique des modules Tiers, Fournisseurs et Import..."
+    docker compose exec -T dolibarr php -r '
+    require_once "/var/www/html/master.inc.php";
+    require_once DOL_DOCUMENT_ROOT . "/core/lib/admin.lib.php";
+    $langs->load("admin");
+    $user->fetch(1);
+    $user->getrights();
+    activateModule("modSociete");
+    activateModule("modFournisseur");
+    activateModule("modImport");
+    '
+  fi
 fi
 
 echo "Installation terminée : http://localhost:${WEB_PORT} (login : ${DOLI_ADMIN_LOGIN})"
