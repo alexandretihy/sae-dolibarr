@@ -125,6 +125,26 @@ L'importation fonctionne désormais comme prévu.
 - Mettre en place une sauvegarde (backup) du projet afin de sécuriser les données.
 - Vérifier le bon fonctionnement global du processus d'importation.
 
+## Séance n° 7 – Finalisation du projet 
+
+Date : 05/11
+Horaires : 13h – 16h
+
+Durant cette séance, nous avons finalisé le projet en mettant une backup permettant de gérer les situations dans lesquelles les données sont vides.
+
+Nous avons également effectué plusieurs vérifications afin de nous assurer du bon fonctionnement de l'ensemble du projet et de corriger les éventuels problèmes rencontrés.
+
+Enfin, nous avons terminé la documentation du projet avec :
+
+La création du fichier README, présentant son fonctionnement et les instructions d'utilisation.
+L'ajout des sources utilisées au cours du développement.
+Cette séance a permis de finaliser le développement du projet, de vérifier sa fiabilité et de préparer sa livraison.
+
+
+
+
+
+
 
 
 
