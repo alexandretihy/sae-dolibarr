@@ -37,6 +37,16 @@ Il se fait automatiquement à l'installation.
 
 BACKUP DES DONNÉES
 
+Le script backup.sh permet de faire une copie de secours de la base de données de Dolibarr. Elle contient les tiers (clients et fournisseurs), les utilisateurs et la configuration.
+
+Les conteneurs doivent être démarrés. Pour lancer la sauvegarde :
+
+    ./backup.sh
+
+La copie est enregistrée dans le fichier sql/backup.sql. Elle est faite pendant que Dolibarr fonctionne, sans bloquer les utilisateurs.
+
+Chaque nouvelle sauvegarde remplace la précédente. Seule la base de données est sauvegardée, pas les documents ajoutés dans Dolibarr. Il faut aussi copier le fichier sur une autre machine, sinon il sera perdu avec le serveur en cas de panne
+
 COMMANDES UTILES
 
     docker compose ps -a                 # etat des conteneurs
