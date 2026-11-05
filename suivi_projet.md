@@ -51,10 +51,6 @@ Commencer à réfléchir à l'automatisation de son installation.
 
 ## Séance n° 3
 
-Séance n° 3 – Configuration et résolution des problèmes
-Date : 06/10/2026
-Horaires : 16h00 – 17h30
-
 Objectifs de la séance
 Poursuivre la configuration de l'environnement Docker.
 Identifier et résoudre les problèmes rencontrés lors de la séance précédente.
@@ -81,14 +77,20 @@ La principale difficulté rencontrée concerne la compréhension du système d'i
 
 ## Séance n° 5
 
-* 06/10/2026 de 13h-16h
-* objectif automatiser installation de dolibarr avec les docker
-* 
-* difficulté comprendre le fonctionnement de dolibarr pour l'importation du fichier
+Date : 02/11/2026
+Horaire : 13h00 – 16h00
 
-sur cette séance on a création de l'automatisation de dolibar 
+Objectif de la séance :
+Automatiser l’installation de Dolibarr à l’aide de Docker.
 
-poiur la prochaine seance on doit poursuire aotomatisation notament limportation des fichier csv
+Travaux réalisés :
+Lors de cette séance, nous avons travaillé sur la mise en place de l’automatisation de l’installation de Dolibarr à l’aide de conteneurs Docker.
+
+Difficultés rencontrées :
+Nous avons rencontré des difficultés pour comprendre le fonctionnement de Dolibarr, notamment concernant le processus d’importation des fichiers et leur intégration dans le logiciel.
+
+Objectifs de la prochaine séance :
+Poursuivre le développement de l’automatisation de Dolibarr, en mettant particulièrement l’accent sur l’importation des fichiers CSV et leur intégration dans l’application.
 
 ## Séance n° 6 – Automatisation de l'importation des fichiers CSV
 
