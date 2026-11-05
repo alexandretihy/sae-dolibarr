@@ -45,7 +45,7 @@ Les conteneurs doivent être démarrés. Pour lancer la sauvegarde :
 
 La copie est enregistrée dans le fichier sql/backup.sql. Elle est faite pendant que Dolibarr fonctionne, sans bloquer les utilisateurs.
 
-Chaque nouvelle sauvegarde remplace la précédente. Seule la base de données est sauvegardée, pas les documents ajoutés dans Dolibarr. Il faut aussi copier le fichier sur une autre machine, sinon il sera perdu avec le serveur en cas de panne
+Chaque nouvelle sauvegarde remplace la précédente. Seule la base de données est sauvegardée, pas les documents ajoutés dans Dolibarr. De plus, la backup est utilisée automatiquement si install.sh remarque un défaut (database n'existe pas ou est vide) avec la database actuelle. 
 
 COMMANDES UTILES
 
