@@ -52,8 +52,9 @@ Commencer à réfléchir à l'automatisation de son installation.
 ## Séance n° 3
 
 Objectifs de la séance
+
+Creation du docker avec doliabrr 
 Poursuivre la configuration de l'environnement Docker.
-Identifier et résoudre les problèmes rencontrés lors de la séance précédente.
 
 ## Séance n° 4
 
