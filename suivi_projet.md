@@ -53,8 +53,17 @@ Commencer à réfléchir à l'automatisation de son installation.
 
 Objectifs de la séance
 
-Creation du docker avec doliabrr 
 Poursuivre la configuration de l'environnement Docker.
+Créer et configurer un conteneur Docker dédié à Dolibarr.
+Automatiser le déploiement de l'application à l'aide de Docker Compose.
+
+Travail réalisé
+
+Lors de cette séance, nous avons poursuivi la mise en place de l'environnement Docker en travaillant sur la création d'un conteneur Dolibarr.
+
+Nous avons configuré les différents paramètres nécessaires au déploiement de l'application, notamment les variables d'environnement et les services indispensables à son fonctionnement.
+
+Nous avons également commencé à structurer le fichier docker-compose.yml afin de faciliter le lancement et la gestion des différents conteneurs.
 
 ## Séance n° 4
 
