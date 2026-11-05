@@ -39,9 +39,9 @@ Il se fait automatiquement a l'installation.
 
 COMMANDES UTILES
 
-docker compose ps -a                 -> etat des conteneurs
-docker compose logs -f dolibarr      -> logs de Dolibarr (Ctrl+C pour quitter les logs)
-docker compose logs importer         -> resultat de l'import
+docker compose ps -a                 # etat des conteneurs
+docker compose logs -f dolibarr      # logs de Dolibarr (Ctrl+C pour quitter les logs)
+docker compose logs importer         # resultat de l'import
 curl -I http://localhost:8080        -> le site repond ? (200 ou 302 = OK)
 docker compose config --quiet        -> valider le fichier compose
 docker compose down                  -> arreter en gardant les donnees
