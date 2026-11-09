@@ -1,6 +1,5 @@
 # Journal de bord
 
-(remplacer les items en majuscule)
 
 * sae-dolibarr
 * Alexandre
