@@ -1,6 +1,6 @@
 #!/bin/bash
 set -euo pipefail
-
+#arrête le script à la moindre erreur, si une variable non définie est utilisée, ou si une commande dans un pipeline échoue
 export MYSQL_PWD="${DB_PASSWORD}"
 SQL="mariadb -h ${DB_HOST} -u${DB_USER} ${DB_NAME}"
 
