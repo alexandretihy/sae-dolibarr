@@ -52,7 +52,7 @@ services:
       DB_USER: ${DOLI_DB_USER}
       DB_PASSWORD: ${DOLI_DB_PASSWORD}
      volumes:
-      - ./data:/data:ro
+      - ./data:/data:ro #(:ro = read-only)
      restart: "no"
      networks:
       - dolibarr-network
