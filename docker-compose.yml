@@ -41,7 +41,7 @@ services:
 
   importer:
      build:
-      context: .
+      context: .  # Utilise le dossier courant comme contexte de construction
       dockerfile: docker/importer/Dockerfile
      depends_on:
        - mariadb
