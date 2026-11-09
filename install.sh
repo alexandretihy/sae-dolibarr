@@ -48,6 +48,8 @@ else
 fi
 
 echo "Vérification et activation automatique des modules Tiers, Fournisseurs et Import..."
+# -T : Désactive le TTY (évite des messages d'erreur liés à l'environnement Docker)
+# -r (run) : Demande à PHP d'exécuter directement le code fourni entre les guillemets
 docker compose exec -T dolibarr php -r '
 require_once "/var/www/html/master.inc.php";
 require_once DOL_DOCUMENT_ROOT . "/core/lib/admin.lib.php";
