@@ -14,8 +14,6 @@ echo "Sauvegarde de la base de données '${DOLI_DB_NAME}' en cours..."
 docker compose exec -T mariadb mariadb-dump \
   -u root -p"${MYSQL_ROOT_PASSWORD:-root_rt}" \
   --single-transaction \
-  --routines \
-  --triggers \
   "${DOLI_DB_NAME}" > "${BACKUP_FILE}"
 
 echo "Sauvegarde terminée avec succès : ${BACKUP_FILE} ($(du -h "${BACKUP_FILE}" | cut -f1))"
