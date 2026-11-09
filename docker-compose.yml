@@ -6,6 +6,7 @@ services:
     container_name: dolibarr-db
     restart: unless-stopped
     command: --local-infile=1 
+    # Option cruciale : autorise l'importation directe de fichiers locaux (comme tes CSV) dans les requêtes SQL
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: dolibarr
